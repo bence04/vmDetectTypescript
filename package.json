@@ -1,14 +1,30 @@
 {
   "name": "electron-quick-start-typescript",
   "version": "1.0.0",
-  "description": "A minimal Electron application written with Typescript",
+  "description": "Check vm",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.json",
     "watch": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./dist/main.js"
+    "start": "npm run build && electron ./dist/main.js",
+    "electron:linux": "npm run build && electron-builder build --linux",
+    "electron:windows": "npm run build && electron-builder build --windows",
+    "electron:mac": "npm run build && electron-builder build --mac"
   },
-  "repository": "https://github.com/electron/electron-quick-start-typescript",
+  "main": "./dist/main.js",
+  "build": {
+    "appId": "check.vm",
+    "directories": {
+      "output": "release/"
+    },
+    "mac": {
+      "category": "check.vm.test"
+    },
+    "files": [
+      "./dist/**/*",
+      "./src/main.js"
+    ]
+  },
   "keywords": [
     "Electron",
     "quick",
@@ -17,12 +33,12 @@
     "demo",
     "typescript"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "TB",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^9.3.0",
     "tslint": "^6.1.2",
-    "typescript": "^3.9.5"
-  },
-  "dependencies": {}
+    "typescript": "^3.9.5",
+    "electron-builder": "^22.9.1"
+  }
 }
