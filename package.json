@@ -17,8 +17,12 @@
     "directories": {
       "output": "release/"
     },
-    "mac": {
-      "category": "check.vm.test"
+    "win": {
+      "target": "portable",
+      "artifactName": "vm-or-notvm.${ext}"
+    },
+    "dmg": {
+      "artifactName": "vm-or-notvm.${ext}"
     },
     "files": [
       "./dist/**/*",
