@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start-typescript",
+  "name": "vm-or-notvm",
   "version": "1.0.0",
   "description": "Check vm",
   "scripts": {
