@@ -67,6 +67,7 @@ export const virtualMachineHint: { value(): number } = new class {
 			this._virtualMachineOUIs.set('00-1C-42', true);
 			this._virtualMachineOUIs.set('00-16-3E', true);
 			this._virtualMachineOUIs.set('08-00-27', true);
+			this._virtualMachineOUIs.set('00-15-5D', true); // test hyperv
 
 			// colon-separated
 			this._virtualMachineOUIs.set('00:50:56', true);
@@ -76,7 +77,7 @@ export const virtualMachineHint: { value(): number } = new class {
 			this._virtualMachineOUIs.set('00:1C:42', true);
 			this._virtualMachineOUIs.set('00:16:3E', true);
 			this._virtualMachineOUIs.set('08:00:27', true);
-			// this._virtualMachineOUIs.set('00:15:5D', true); // test
+			this._virtualMachineOUIs.set('00:15:5D', true); // test hyperv
 		}
 		return !!this._virtualMachineOUIs.findSubstr(mac);
 	}
